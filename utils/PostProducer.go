@@ -45,7 +45,7 @@ func PostProducer(channel chan<- models.Post, wg *sync.WaitGroup, cfg *models.Co
 
 		page++
 		if page <= 10 {
-			time.Sleep(5 * time.Second)
+			time.Sleep(time.Duration(cfg.Target.Cooldown) * time.Second)
 		}
 	}
 }

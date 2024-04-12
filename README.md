@@ -10,7 +10,7 @@ You will need Go installed and then just run
 go run main.go
 ```
 
-You will also need to modify the config.yml file to fit your needs.
+You will also need to add a config.yml file and modify it to fit your needs.
 
 ```yml
 target:
@@ -18,6 +18,7 @@ target:
   path: "wp-json/wp/v2/posts"
   categories: "0" # Currently does not support optional url parameters
   per_page: "your_number_here" # Max is 100
+  cooldown: 5 # Time in seconds to wait between requests
 keywords: ["list of strings to save into files"]
 ```
 
